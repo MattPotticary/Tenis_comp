@@ -20,10 +20,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import json
+
 class Player(object):
 	"""docstring for Player"""
 	def __init__(self, name, rating):
 		super(Player, self).__init__()
 		self.name = name
 		self.rating = rating
+	
+	def save(self):
+		jsonFile = open("../Data/" + self.name + ".json", 'w')
+		with jsonFile as output:
+			json.dump({"Name":self.name,
+					"Rating":self.rating}, output)
 		

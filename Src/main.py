@@ -30,6 +30,7 @@ def main():
 	player2 = create_player_profile("Player 2")
 	best = compare(player1, player2)
 	print(best.name)
+	best.save()
 
 if __name__ == '__main__':
 	main()
