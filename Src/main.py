@@ -21,14 +21,14 @@
 # SOFTWARE.
 
 import player
-import create_player_profile as player_profile
-import compare
+from create_player_profile import create_player_profile
+from compare import compare
 
 
 def main():
-	player1 = player_profile.create_player_profile("Player 1")
-	player2 = player_profile.create_player_profile("Player 2")
-	best = compare.compare(player1, player2)
+	player1 = create_player_profile("Player 1")
+	player2 = create_player_profile("Player 2")
+	best = compare(player1, player2)
 	print(best.name)
 
 if __name__ == '__main__':
