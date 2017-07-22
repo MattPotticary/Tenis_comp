@@ -20,9 +20,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-def compare(player1, player2):
-	"""Takes in two player objects and returns the bester player"""
-	if (player1.rating > player2.rating):
-		return player1
-	else:
-		return player2
+import player
+import create_player_profile as player_profile
+import compare
+
+
+def main():
+	player1 = player_profile.create_player_profile("Player 1")
+	player2 = player_profile.create_player_profile("Player 2")
+	best = compare.compare(player1, player2)
+	print(best.name)
+
+if __name__ == '__main__':
+	main()

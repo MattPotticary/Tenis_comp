@@ -19,3 +19,10 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+
+import player
+import random
+
+def create_player_profile(name):
+	"""Create a player object - Currently returns dummy object"""
+	return player.Player(name, random.randint(1, 10))
