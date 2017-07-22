@@ -22,6 +22,7 @@
 import player.py
 
 def compare(player1, player2):
+	"""Takes in two player objects and returns the bester player"""
 	if (player1.rating > player2.rating_
 		return player1
 	else:
